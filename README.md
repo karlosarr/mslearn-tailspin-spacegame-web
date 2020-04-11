@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/karlosarr/Space%20Game%20-%20web%20-%20Pipeline/_apis/build/status/karlosarr.mslearn-tailspin-spacegame-web?branchName=master)](https://dev.azure.com/karlosarr/Space%20Game%20-%20web%20-%20Pipeline/_build/latest?definitionId=13&branchName=master)
+
 
 # Contributing
 
