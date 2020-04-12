@@ -74,6 +74,14 @@ steps:
     minorVersion: '0'
     patchVersion: '0'
 
+- task: NuGetCommand@2
+  displayName: 'Publish NuGet package'
+  inputs:
+    command: push
+    publishVstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models'
+    allowPackageConflicts: true
+  condition: succeeded()
+
 - task: DotNetCoreCLI@2
   displayName: 'Install ReportGenerator'
   inputs:
@@ -130,12 +138,4 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
-  condition: succeeded()
-  
-- task: NuGetCommand@2
-  displayName: 'Publish NuGet package'
-  inputs:
-    command: push
-    publishVstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models'
-    allowPackageConflicts: true
   condition: succeeded()
